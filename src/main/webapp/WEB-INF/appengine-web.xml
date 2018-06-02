@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+
+  <threadsafe>true</threadsafe>
+  <sessions-enabled>false</sessions-enabled>
+  <service>gmb</service>
+  <runtime>java8</runtime>
+  <async-session-persistence enabled="true" />
+  
+  <basic-scaling>
+    <max-instances>11</max-instances>
+    <idle-timeout>10m</idle-timeout>
+  </basic-scaling>
+  <system-properties>
+  	<property name="appengine.api.urlfetch.defaultDeadline" value="90"/>
+    <property name="cloudsql" value="jdbc:mysql://google/gmb_db?useSSL=false&amp;cloudSqlInstance=mov-prod3:europe-west1:mov-gmb&amp;socketFactory=com.google.cloud.sql.mysql.SocketFactory&amp;user=root&amp;password=FAYO0173" />
+  </system-properties>
+
+</appengine-web-app>

@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>mov-tienda2</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    
+    $("p").hide();
+    $("#show").click(function(){
+        $("p").show();
+    });});
+</script>
+</head>
+
+<h1>Aplicación para extraer las valoraciones de las tiendas</h1>
+<body>
+<form id="someform" method="post" action="/servlet_tienda" >
+  Introduzca el código, por favor:<br>
+  <input type="text" name="codigo">
+  <br><br>
+  <input id="show" type="submit" value="¡A por ello!">     
+</form>
+
+
+
+<p>Procesando, espere unos minutos...</p>
+
+
+
+</body>
+</html>
